@@ -55,9 +55,8 @@ desc comments;
 
 
 
-
-
 #create a like table
+
 
 create table likes(
 #here not need to the id because we are not use the further this table
@@ -204,6 +203,7 @@ select * from photo_tags;
 
 #challenge 1 =>Finding 5 oldest user
 
+
 select * from users order by created_at  limit 5;
 
 
@@ -228,9 +228,8 @@ limit 2;
 
 
 
-
-
 #challenge 3 =>identify the user is inactive(users with no photos)
+
 
 select * from users;
 
@@ -267,6 +266,7 @@ select * from likes;
 
 #useing left join
 
+
 select username,
 image_url,
 count(*) AS 'most_like'
@@ -280,6 +280,7 @@ order by most_like desc limit 1;
 
 
 #using inner join
+
 
 select username,
 image_url,
@@ -415,5 +416,3 @@ group by likes.user_id
 HAVING total = (select count(*) from photos);  #dynamically assign the total number of value assign the total
 
 
-
- 
