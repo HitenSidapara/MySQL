@@ -2,6 +2,8 @@ show databases;
 
 #CREATE DATABASE CRUD=>create,read,update,delete and SELECT DATABASE
 
+#drop database crud;
+
 create database crud;
 use crud;
 select database();
@@ -17,7 +19,9 @@ breed varchar(100),
 age INT,
 PRIMARY KEY(cat_id)
 );
+
 DESC cats;
+
 
 #INSERT DATA INTO THE TABLE
 
@@ -45,7 +49,7 @@ SELECT cat_id,name,age FROM cats;
 
 SELECT age,breed,name,cat_id FROM cats; 
 
-SELECT breed,cat_id,name FROm cats;
+SELECT breed,cat_id,name FROM cats;
 
 SELECT CAT_ID,NAME,AGE FROM cats; 
 
@@ -66,7 +70,7 @@ SELECT cat_id FROM cats;
 
 SELECT name,breed FROM cats;
 
-SELECT name,age FROM cats WHERE breed='Tabby';
+SELECT name,age,breed FROM cats WHERE breed='Tabby';
 
 SELECT cat_id,age FROM cats WHERE cat_id=age;
 
@@ -115,3 +119,6 @@ DELETE FROM cats; #delete all the contant not table
 DELETE FROM cats WHERE age=4;
 DELETE FROM cats WHERE age=cat_id;
 DELETE FROM cats;
+
+
+DESC cats;

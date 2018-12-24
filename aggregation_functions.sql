@@ -10,6 +10,7 @@ select database();
 
 #COUNT FUNCTION
 
+
 select * from books;
 
 select count(*) AS 'COUNT' from books;  #count the number of the row
@@ -30,6 +31,8 @@ select count(title) from books where title LIKE '%The%';
 
 #group by function=>grouping of the data
 
+
+
 select title,author_lname  from books group by author_lname; #group by author_lname
 
 select title,author_fname,author_lname,count(*) from books group by author_lname;#how many book write by the author show in the count 
@@ -43,11 +46,10 @@ select concat('IN ',released_year,' ',count(*),' books released') AS 'year' from
 
 
 
-
-
-
-
 #MIN AND MAX FUNCTION
+
+
+
 
 select min(released_year) from books;#min released year print
 
@@ -76,7 +78,9 @@ select * from books where released_year=(select min(released_year) from books);
 select * from books where released_year=(select max(released_year) from books);
 
 
+
 #min & max using group by function
+
 
 select author_fname,author_lname,released_year,min(released_year) from books group by author_lname,author_fname; 
 
@@ -94,11 +98,14 @@ select concat(author_fname,' ',author_lname) AS author , max(pages) AS pages fro
 
 #SUM FUNCTION
 
+
+
 select sum(pages) from books;
 
 select sum(released_year) from books;
 
 #sum+group by
+
 
 select author_fname,author_lname,sum(pages) from books group by author_lname,author_fname;
 
@@ -108,17 +115,16 @@ select author_fname,author_lname,sum(released_year) from books group by author_l
 
 
 
-
-
-
-
 #AVG=> average function
+
 
 select avg(released_year) from books;
 
 select avg(pages) from books;
 
+
 #avg+group by
+
 
 select released_year,avg(stock_quantity) from books group by released_year;
 
@@ -129,6 +135,7 @@ select author_fname,author_lname,avg(pages) from books group by author_lname,aut
 
 
 #practice
+
 
 select count(*) from books;
 

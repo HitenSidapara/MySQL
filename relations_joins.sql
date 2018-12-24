@@ -1,5 +1,8 @@
 show databases;
+
 #create database rj means relationship and joins
+#DROP DATABASE rj;
+
 create database rj;
 use rj;
 select database();
@@ -87,10 +90,11 @@ select * from orders,customers;
 
 
 
-	#inner join
+#inner join
 
 
 #IMPLICIT INNER JOINS
+
 select * from customers , orders
 where customers.id = orders.customer_id;   #here customers.id = customers table and id row specified because in order table id row
 										   #orders.customers_id = orders table customer_id row then fetch the data
@@ -152,9 +156,8 @@ order by TOTAL_AMOUNT DESC;
 
 
 
-
-
 #RIGHT JOIN
+
 
 select * from customers
 right join orders
@@ -253,11 +256,9 @@ right join orders on customers.id = orders.customer_id;#both result are same but
 
 
 
-
-
-
-
 #practice
+
+
  create table students(
  id int auto_increment primary key,
  first_name varchar(50)

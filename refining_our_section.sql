@@ -1,5 +1,7 @@
 #select database and use the data base
 
+#DROP DATABASE books;
+
 show databases;
 use books;
 select database();
@@ -22,10 +24,8 @@ select title from books;
 
 
 
-
-
-
 #DESTINCT use to the duplicate value remove and unique value fetch from the database
+
 
 select author_lname from books;
 
@@ -85,9 +85,9 @@ select author_fname,author_lname from books order by author_lname,author_fname;
 
 
 
-
-
 #limit function
+
+
 
 select title from books; #all the data fetch
 
@@ -116,6 +116,9 @@ select * from books LIMIT 5,123456789; #in second parameter we are use some giga
 
 #LIKE Function => used to search better and flexible search
 
+
+
+
 select * from books where author_fname LIKE "%da%";  #in author_fname contains words da then fetch the data
 
 select * from books where author_fname LIKE "da%";  #starts with da and next anything else
@@ -143,6 +146,8 @@ select title from books where title like "%\_%";#here find the _ sign from the d
 
 
 #practice
+
+
 
 select title from books where title LIKE "%stories";
 

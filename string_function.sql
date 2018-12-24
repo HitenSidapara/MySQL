@@ -2,6 +2,8 @@ SHOW DATABASES;
 
 #create database
 
+#DROP DATABASE BOOKS;
+
 CREATE DATABASE BOOKS;
 USE BOOKS;
 SELECT DATABASE();
@@ -50,7 +52,7 @@ SELECT * FROM books;
 
 # string function CONCAT
 
-SELECT CONCAT('HELLO',' ','WORLD');
+SELECT CONCAT('HELLO',' ','WORLD') AS Concat;
 
 SELECT CONCAT(author_fname,author_lname) FROM books;
 
@@ -146,7 +148,7 @@ SELECT REPLACE(CONCAT('I',' ','like',' ','cats'),' ','_');
 
 SELECT REPLACE(title,' ','=>') AS Title FROM books;
 
-SELECT author_lname AS forwards,REVERSE(author_lname) AS backwards FROm books;
+SELECT author_lname AS forwards,REVERSE(author_lname) AS backwards FROM books;
 
 SELECT CONCAT(UPPER(author_fname),' ',UPPER(author_lname)) AS 'Full name in caps' FROm books;
 

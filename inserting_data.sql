@@ -101,7 +101,7 @@ create table people1(
  age int
 );
 
-desc people;
+desc people1;
 
 INSERT INTO people1(name,age)
 VALUES('Ram',10);
@@ -223,6 +223,12 @@ DESC employees;
 
 INSERT INTO employees(first_name, last_name, age) VALUES
 ('Dora', 'Smith', 58);
+
+INSERT INTO employees(first_name, last_name, age)VALUES
+('Herission','wells',45),
+('Barry','Allen',23),
+('Cisco','Ramona',25),
+('Catlin','snow',28);
 
 SELECT * FROM employees;
 

@@ -2,6 +2,9 @@ show databases;
 
 #create a new database
 
+ #drop database tv_review_app;
+
+
  create database tv_review_app;
  use tv_review_app;
  select database();
@@ -11,7 +14,7 @@ show databases;
  
  
  
-		#reviewers table create
+ #reviewers table create
  
  create table reviewers(
  id int auto_increment primary key,
@@ -36,8 +39,7 @@ select * from reviewers;
 
 
 
- 
-		#series table
+	#series table
  
  create table series(
  id int auto_increment primary key,

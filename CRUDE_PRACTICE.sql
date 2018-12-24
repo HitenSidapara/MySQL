@@ -1,5 +1,8 @@
 #create database shirts_db
 
+
+#drop database shirts_db;
+
 CREATE DATABASE shirts_db;
 SHOW DATABASES;
 USE shirts_db;
@@ -8,11 +11,12 @@ SELECT DATABASE();
 #create table shirts
 
 CREATE TABLE shirts(
-shirt_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+shirt_id INT AUTO_INCREMENT NOT NULL,
 article varchar(255),
 color varchar(255),
 shirt_size varchar(100),
-last_worn INT
+last_worn INT,
+PRIMARY KEY(shirt_id)
 );
 
 DESC shirts;

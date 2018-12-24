@@ -16,9 +16,11 @@ create table pastries(
 );
 show tables;
 desc pastries;
+desc teacher;
 drop table pastries;
 show columns from student;
 describe student;
 desc teacher;
 DROP TABLE teacher;
+DROP TABLE student;
 drop database students;

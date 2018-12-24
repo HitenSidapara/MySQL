@@ -67,6 +67,7 @@ select title,author_lname from books where author_lname='eGGers';#not is case se
 
 #less than and less then equals to signal
 
+
 select title,released_year from books order by released_year;
 
 select title,released_year from books where released_year < 2000 order by released_year;
@@ -79,6 +80,7 @@ select 'Q' <= 'q';#here sql is not case sensitive
 
 
 #logical and operator
+
 
 select title,author_lname,released_year from books where author_lname="Eggers";
 
@@ -97,8 +99,7 @@ select 7>3 and 1<3;
 select title,author_lname,released_year from books
 where author_lname="Eggers" &&
 released_year > 2010 AND
-title LIKE "%Novel%"
-;														#use the multiple end condition
+title LIKE "%Novel%";														#use the multiple And condition
 
 
 
@@ -120,6 +121,7 @@ OR released_year>2010
 
 #between operator
 
+
 select title,released_year from books  where released_year >= 2004 AND released_year <= 2015 order by released_year;
 
 select title,released_year from books  where released_year between 2004 and 2015 order by released_year;#use the between keyword
@@ -129,6 +131,7 @@ select title,released_year from books  where released_year not between 2004 and 
 
 
 #cast method
+
 
 select cast('2018-10-19' AS datetime); #covert string into the datetime
 
@@ -151,6 +154,7 @@ AND cast('2000-01-01' AS datetime);#cast string into date time using csting oper
 #in and NOT IN method
 
 use books;
+
 show tables;
 
 select * from books;
@@ -192,9 +196,9 @@ where released_year NOT IN(released_year % 2) order by released_year;#odd number
 select title,released_year from books
 where released_year NOT IN(!(released_year % 2)) order by released_year;#even number year print
 
-select title,released_year from books where released_year>=200 AND released_year % 2 !=0 order by released_year; #odd number year print
+select title,released_year from books where released_year>=2000 AND released_year % 2 !=0 order by released_year; #odd number year print
 
-select title,released_year from books where released_year>=200 AND released_year !=2013 order by released_year;#2013 number remove
+select title,released_year from books where released_year>=2000 AND released_year !=2013 order by released_year;#2013 number remove
 
 
 
@@ -203,6 +207,7 @@ select title,released_year from books where released_year>=200 AND released_year
 
 
 #case statments => LOGIC APPLY
+
 
 select * from books;
 
